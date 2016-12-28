@@ -6,8 +6,8 @@
   "mysqlCorp": {
     "host": "127.0.0.1",
     "port": 3306,
-    "url": "mysql://root:root@127.0.0.1/loopback-test",
-    "database": "loopback-test",
+    "url": "mysql://root:root@127.0.0.1/pharma-investi",
+    "database": "pharma-investi",
     "password": "root",
     "name": "mysqlCorp",
     "user": "root",

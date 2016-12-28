@@ -32,15 +32,7 @@
     "dataSource": "mysqlCorp",
     "public": false
   },
-  "team": {
-    "dataSource": "mysqlCorp",
-    "public": false
-  },
-  "project": {
-    "dataSource": "mysqlCorp",
-    "public": true
-  },
-  "client": {
+  "Client": {
     "dataSource": "mysqlCorp",
     "public": true
   }

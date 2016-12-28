@@ -1,6 +1,6 @@
 {
-  "name": "client",
-  "plural": "clients",
+  "name": "Client",
+  "plural": "Clients",
   "base": "User",
   "idInjection": true,
   "options": {
@@ -8,25 +8,7 @@
   },
   "properties": {},
   "validations": [],
-  "relations": {
-    "projects": {
-      "type": "hasMany",
-      "model": "project",
-      "foreignKey": "ownerId"
-    },
-    "teams": {
-      "type": "hasMany",
-      "model": "team",
-      "foreignKey": "ownerId"
-    }
-  },
-  "acls": [
-    {
-      "accessType": "*",
-      "principalType": "ROLE",
-      "principalId": "$everyone",
-      "permission": "DENY"
-    }
-  ],
+  "relations": {},
+  "acls": [],
   "methods": {}
 }
