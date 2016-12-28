@@ -1,10 +1,12 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
-exports.default = function (app) {
+/**
+ * Created by diego on 27-12-16.
+ */
+
+module.exports = function (app) {
 
   var Client = app.models.Client;
   var Role = app.models.Role;
@@ -13,30 +15,35 @@ exports.default = function (app) {
 
   var dataSource = app.dataSources.mysqlCorp;
 
-  dataSource.automigrate(function (err) {
-    if (err) throw err;
+  dataSource.automigrate(_asyncToGenerator(function* () {
 
-    Client.create([{ username: 'admin', email: 'admin@gmail.com', password: 'admin' }], function (err, clients) {
-      if (err) console.log(err.stack);
+    let client = { username: 'admin', email: 'admin@gmail.com', password: 'admin' };
 
-      //create the admin role
-      Role.create({
-        name: 'admin'
-      }, function (err, role) {
-        if (err) throw err;
+    let clientSave = yield Client.create(client);
 
-        //make bob an admin
-        role.principals.create({
-          principalType: RoleMapping.USER,
-          principalId: clients[0].id
-        }, function (err, principal) {
-          if (err) throw err;
-        });
-      });
-    });
-  });
+    // Client.create([
+    //     {username: 'admin', email: 'admin@gmail.com', password: 'admin'},
+    //   ])
+    //   .then(function (client) {
+    //     console.log("here");
+    //     // console.log(client);
+    //   })
+
+
+    //create the admin role
+    // Role.create({
+    //   name: 'admin'
+    // }, function(err, role) {
+    //   if (err) throw err;
+    //
+    //   //make bob an admin
+    //   role.principals.create({
+    //     principalType: RoleMapping.USER,
+    //     principalId: clients[0].id
+    //   }, function(err, principal) {
+    //     if (err) throw err;
+    //
+    //   });
+    // });
+  }));
 };
-
-; /**
-   * Created by diego on 27-12-16.
-   */
