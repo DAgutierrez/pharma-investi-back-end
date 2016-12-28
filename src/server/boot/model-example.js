@@ -3,7 +3,7 @@
  */
 
 
-module.exports = function(app) {
+export default function(app) {
 
   var Client = app.models.Client;
   var Role = app.models.Role;
@@ -15,8 +15,6 @@ module.exports = function(app) {
 
   dataSource.automigrate(function (err) {
     if(err) throw  err;
-
-    console.log('migrate!');
 
     Client.create([
         {username: 'admin', email: 'admin@gmail.com', password: 'admin'},

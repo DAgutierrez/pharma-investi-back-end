@@ -6,7 +6,7 @@
 // This file is licensed under the Artistic License 2.0.
 // License text available at https://opensource.org/licenses/Artistic-2.0
 
-module.exports = function(app) {
+export default function(app) {
   var Role = app.models.Role;
 
   Role.registerResolver('teamMember', function(role, context, cb) {

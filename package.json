@@ -7,7 +7,16 @@
     "start": "node .",
     "posttest": "npm run lint && nsp check"
   },
+  "babel": {
+    "presets": [
+      "stage-3"
+    ],
+    "plugins": [
+      "transform-es2015-modules-commonjs"
+    ]
+  },
   "dependencies": {
+    "babel-core": "^6.21.0",
     "body-parser": "^1.15.2",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
@@ -21,8 +30,13 @@
     "strong-error-handler": "^1.0.1"
   },
   "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "babel-preset-stage-3": "^6.17.0",
     "eslint": "^2.13.1",
     "eslint-config-loopback": "^4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-nodemon": "^2.2.1",
     "nsp": "^2.1.0"
   },
   "repository": {

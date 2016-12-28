@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mysqlCorp": {
+    "host": "127.0.0.1",
+    "port": 3306,
+    "url": "mysql://root:root@127.0.0.1/pharma-investi",
+    "database": "pharma-investi",
+    "password": "root",
+    "name": "mysqlCorp",
+    "user": "root",
+    "connector": "mysql"
+  }
+}
