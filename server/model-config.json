@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "mysqlCorp"
+  },
+  "AccessToken": {
+    "dataSource": "mysqlCorp",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "mysqlCorp",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mysqlCorp",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "mysqlCorp",
+    "public": false
+  },
+  "team": {
+    "dataSource": "mysqlCorp",
+    "public": false
+  },
+  "project": {
+    "dataSource": "mysqlCorp",
+    "public": true
+  },
+  "client": {
+    "dataSource": "mysqlCorp",
+    "public": true
+  }
+}
