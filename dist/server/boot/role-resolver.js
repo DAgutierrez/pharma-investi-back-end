@@ -1,10 +1,14 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+/**
+ * Created by diego on 27-12-16.
+ */
+// Copyright IBM Corp. 2015,2016. All Rights Reserved.
+// Node module: loopback-example-access-control
+// This file is licensed under the Artistic License 2.0.
+// License text available at https://opensource.org/licenses/Artistic-2.0
 
-exports.default = function (app) {
+module.exports = function (app) {
   var Role = app.models.Role;
 
   Role.registerResolver('teamMember', function (role, context, cb) {
@@ -44,11 +48,3 @@ exports.default = function (app) {
     });
   });
 };
-
-; /**
-   * Created by diego on 27-12-16.
-   */
-// Copyright IBM Corp. 2015,2016. All Rights Reserved.
-// Node module: loopback-example-access-control
-// This file is licensed under the Artistic License 2.0.
-// License text available at https://opensource.org/licenses/Artistic-2.0

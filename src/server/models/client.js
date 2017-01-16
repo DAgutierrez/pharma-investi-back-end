@@ -7,15 +7,21 @@ module.exports =  function (Client) {
 
   Client.greetClient = async function(userName,lastName) {
 
-    Client.create(
-      {username: 'admin', email: 'admin@gmail.com', password: 'admin'},
-    )
-    .then(function (client) {
-      console.log(client);
-      // console.log(client);
-    })
+    // setTimeout(function () {
+    //   return "response";
+    // },2000)
 
-    // return greetUser(userName,lastName);
+    // Client.create(
+    //   {username: 'admin', email: 'admin@gmail.com', password: 'admin'},
+    // )
+    // .then(function (client) {
+    //   console.log(client);
+    //   // console.log(client);
+    // })
+
+    // console.log("here");
+    //
+    return   greetUser(userName,lastName);
 
   }
 

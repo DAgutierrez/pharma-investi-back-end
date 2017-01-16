@@ -13,12 +13,21 @@ module.exports = function (Client) {
   Client.greetClient = (() => {
     var _ref = _asyncToGenerator(function* (userName, lastName) {
 
-      Client.create({ username: 'admin', email: 'admin@gmail.com', password: 'admin' }).then(function (client) {
-        console.log(client);
-        // console.log(client);
-      });
+      // setTimeout(function () {
+      //   return "response";
+      // },2000)
 
-      // return greetUser(userName,lastName);
+      // Client.create(
+      //   {username: 'admin', email: 'admin@gmail.com', password: 'admin'},
+      // )
+      // .then(function (client) {
+      //   console.log(client);
+      //   // console.log(client);
+      // })
+
+      // console.log("here");
+      //
+      return (0, _greetClient2.default)(userName, lastName);
     });
 
     return function (_x, _x2) {

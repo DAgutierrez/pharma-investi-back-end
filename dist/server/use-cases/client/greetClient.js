@@ -12,10 +12,16 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 exports.default = (() => {
   var _ref = _asyncToGenerator(function* (userName, lastName) {
-    return "grettings " + userName + ' ' + lastName;
+
+    yield timeout(20000);
+    return "test";
   });
 
   return function (_x, _x2) {
     return _ref.apply(this, arguments);
   };
 })();
+
+function timeout(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}

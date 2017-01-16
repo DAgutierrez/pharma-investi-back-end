@@ -1,11 +1,7 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = enableAuthentication;
-function enableAuthentication(server) {
+module.exports = function enableAuthentication(server) {
   // enable authentication
-
+  console.log("here");
   server.enableAuth();
 };

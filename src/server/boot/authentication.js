@@ -1,7 +1,8 @@
 'use strict';
 
-export default function enableAuthentication(server) {
+module.exports =  function enableAuthentication(server) {
   // enable authentication
-
   server.enableAuth();
 };
+
+

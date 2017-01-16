@@ -3,5 +3,13 @@
  */
 
 export default async function (userName,lastName) {
-    return "grettings " + userName + ' ' + lastName;
+
+
+   await timeout(20000);
+  return "test";
+
+}
+
+function timeout(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
