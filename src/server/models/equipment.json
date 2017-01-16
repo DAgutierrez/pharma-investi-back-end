@@ -1,0 +1,37 @@
+{
+  "name": "Equipment",
+  "plural": "Equipments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "serie": {
+      "type": "string",
+      "required": true
+    },
+    "registrationDate": {
+      "type": "date"
+    },
+    "line": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "frecuencyOfMaintenance": {
+      "type": "string"
+    },
+    "WarrantyPeriod": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

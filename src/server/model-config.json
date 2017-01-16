@@ -35,5 +35,9 @@
   "Client": {
     "dataSource": "mysqlCorp",
     "public": true
+  },
+  "Equipment": {
+    "dataSource": "mysqlCorp",
+    "public": true
   }
 }
