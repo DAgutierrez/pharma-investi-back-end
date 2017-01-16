@@ -2,6 +2,5 @@
 
 module.exports = function enableAuthentication(server) {
   // enable authentication
-  console.log("here");
   server.enableAuth();
 };
